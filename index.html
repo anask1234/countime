@@ -1,38 +1,57 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Home - Countime</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home - Countime</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/x-icon" href="/images/logo.svg">
 
 </head>
 
 <body>
     <header>
-      <img class="logo"src="images/logo.svg" alt="Logo">
-      <nav>
-        <ul class="nav_links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="https://github.com/anask1234/countime.xyz"><button>Source Code On Github</button></a>
+        <img class="logo" src="images/logo.svg" alt="Logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="https://github.com/anask1234/countime.xyz"><button>Source Code On Github</button></a>
     </header>
- <h3 class="head">How many days until?</h3>
-<center><form action="/results.html" method="POST">
-  <label for="month">Month:</label><br>
-  <input type="text" id="month" name="month" placeholder="Jan"><br>
-  <label for="day">Day:</label><br>
-  <input type="text" id="day" name="day" placeholder="0-31"><br>
-  <label for="year">Year:</label><br>
-  <input type="text" id="year" name="year" placeholder="2022"><br><br>
-  <input type="submit" value="Submit">
-</form></center>
-  <script src="script.js"></script>
-  
+    <h3 class="head">How many days until?</h3>
+    <center>
+        <label for="month">Month:</label><br>
+        <input type="text" id="month" name="month" placeholder="Jan"><br>
+        <label for="day">Day:</label><br>
+        <input type="text" id="day" name="day" placeholder="0-31"><br>
+        <label for="year">Year:</label><br>
+        <input type="text" id="year" name="year" placeholder="2022"><br><br>
+        <input type="submit" onclick="AddValue()" id="btnSubmit" value="Submit">
+    </center>
+    <script src="script.js"></script>
+
 </body>
 
 </html>
+<script>
+    function AddValue() {
+        var month = document.getElementById('month').value;
+        var day = document.getElementById('day').value;
+        var year = document.getElementById('year').value;
+        console.log(month);
+        console.log(day);
+        console.log(year);
+        
+        sessionStorage.setItem('month', month);
+        sessionStorage.setItem('day', day);
+        sessionStorage.setItem('year', year);
+
+        window.location = "results.html";
+    }
+
+
+</script>
