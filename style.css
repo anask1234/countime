@@ -57,3 +57,13 @@ button{
 button:hover{
   background-color:rgba(0,136,169,0.8);
 }
+
+.head{
+  color:white;
+  text-align:center;
+}
+
+.sub{
+  color:#0088a9;
+  text-align:center;
+}
