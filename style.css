@@ -61,6 +61,8 @@ button:hover{
 .head{
   color:white;
   text-align:center;
+  margin-top:10rem;
+  
 }
 
 .sub{
@@ -76,4 +78,10 @@ button:hover{
 .countdown{
   color:#0088a9;
   text-align:center;
+}
+
+.anasmail{
+  text-color:#0088a9;
+  text-align:center;
+  font-weight:bold;
 }

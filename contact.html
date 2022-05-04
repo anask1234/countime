@@ -7,6 +7,27 @@
   <title>Home - Countime</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/x-icon" href="/images/logo1.svg">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src=
+	"https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script type="text/javascript">
+	function sendEmail() {
+	Email.send({
+		Host: "smtp.privateemail.com",
+		Username: "admin@anaskattan.me",
+		Password: "Pp5377sd",
+		To: 'anas@countime.xyz',
+		From: "anas@countime.xyz",
+		Subject: "Re:Countime Question",
+		Body: "Email:+",
+	})
+		.then(function (message) {
+		alert("Your contact form has been submitted, you will get a response within 24 hours")
+		});
+	}
+</script>
 
 </head>
 
@@ -23,7 +44,18 @@
     </header>
   <hr size="2" width="100%" color="black">  
   <h3 class="head">Contact!</h3>
-  <h4 class="sub"><a href="mailto:anas@countime.xyz">Anas - Website Developer / Owner</a></h4>
+
+
+<form method="post">
+  <label for="email">Your email:</label><br>
+  <input type="text" id="email" name="email"><br>
+  <label for="question">Question:</label><br>
+  <input type="text" id="question" name="question">
+	<input type="button" value="Send Email"
+		onclick="sendEmail()" />
+</form>
+
+
   <script src="script.js"></script>
 </body>
 
